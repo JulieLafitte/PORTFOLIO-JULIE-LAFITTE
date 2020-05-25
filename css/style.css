@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #DEC1AF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+   
+}
+    /* Surlignement du texte */
+    ::-moz-selection { background: white; }
+    ::selection { background: white; }
+
+
+header{
+    height: 941px;
+    background-image: url("../assets/illustrations/header-illustration.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    
+}
+
+nav{
+    height: 5%;
+    width: 32%;
+    margin-left: 20%;
+    transform: translate(-50%, 50px);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: orange;
+    height: 20px;
+    padding: 8px;
+    font-size:20px;
+}
+
+nav a:hover{
+    /* background-color:rgba(255, 255, 255, 0.50); */
+    border-bottom:4px solid rgba(255, 255, 255, 0.50);
+    border-radius:none;
+    height: 20px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    /* font-family: "hearthstone", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: white;
+    font-size: 8.5em;
+    font-weight: 400;
+    text-shadow: 0px 0px 5px #fff4c2, 0px 0px 10px #ff9f46, 0px 0px 30px #bf0aff61;
+     
+}
+
+h2{
+    font-family: 'Dancing Script', cursive;
+    /* font-family: "hearthstone", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: white;
+    font-size: 6em;
+    margin-left:14%;
+    font-weight: 400;
+    text-shadow: 0px 0px 5px #fff4c2, 0px 0px 10px #ff9f46, 0px 0px 30px #bf0aff61;
+}
+
+.name{
+    
+    position: absolute;
+    top: 5%;
+    left:52%;
+}
+
+/* Projects section */
+
+/* Lazy load */
+
+.lazy-load
+{
+    opacity: 0;
+    transition: opacity 0.5s;
+    will-change: opacity;
+    object-fit: cover;
+}
+
+.lazy-load.loaded
+{
+    opacity: 1;
+}
+
+/* Reveal */
+
+.reveal
+{
+    transform: translateY(15vh);
+    opacity: 0;
+}
+
+.reveal.revealed
+{
+    transform: translateY(0vh);
+    opacity: 1;
+    transition: transform 1s cubic-bezier(0, 0, 0, 1), opacity 1s;
+    will-change: transform, opacity;
+}
+
+#projects{
+    width: 100%;
+    box-shadow: 0px -50px 50px 10px #DEC1AF;
+    margin-bottom: 50px;
+}
+
+#projects h3{
+    font-family: 'Dancing Script', cursive;
+    /* font-family: "hearthstone", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: white;
+    text-align: left;
+    font-size: 5em;
+    margin-left: 420px;
+    text-shadow: 0px 0px 5px #fff4c2, 0px 0px 10px #ff9f46, 0px 0px 30px #bf0aff61;
+}   
+
+.project{
+    display: flex;
+    width: 65%;
+    margin-top: 100px;
+}
+
+.project_image{
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+}
+
+.project_image .project_image_container{
+    width: 100%;
+    padding-top: calc(814 / 1400 * 100%);
+}
+
+.project img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.projet-resume{
+width: 38%;
+height: 50vh;
+background-color: #C8ADC0;
+color: white;
+
+}
+
+.project-title{
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+h5{
+    text-align: center;
+    font-weight: 300;
+    font-size: larger;
+    /* letter-spacing: 3px; */
+    color: #FFF4C2;
+}
+
+.project-role{
+    margin-top: 10px;
+}
+
+.project-desc{
+    margin:20px 10px 10px 10px;
+    min-height: 35%;
+    max-height: 45%;
+    overflow-y: scroll;
+}
+
+.project-desc::-webkit-scrollbar{
+    width: 0px;
+}
+
+.btn1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 40%;
+    margin-left: 30%;
+    border: 1.5px solid white;
+    padding: 10px 5px 10px 5px;
+    text-align: center;
+
+    position: relative;
+    box-sizing: border-box;
+
+    transition: color 0.25s;
+}
+
+.btn1:hover{
+    border: none;
+}
+
+.btn1::before{
+    box-sizing: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+
+    border: 1.5px solid transparent;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+.btn1::after{
+    box-sizing: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+
+    border: 1.5px solid transparent;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.btn1:hover{
+    color:white;
+}
+
+.btn1:hover::before{
+    width: 100%;
+    height: 100%;
+    border-top-color: #FF9F46;
+    border-right-color: #FF9F46;
+
+    transition: 
+    width 0.25s ease-out,
+    height 0.25s ease-out 0.25s;
+}
+
+.btn1:hover::after{
+    width: 100%;
+    height: 100%;
+    border-bottom-color: #FF9F46;
+    border-left-color: #FF9F46;
+
+    transition: 
+    border-color 0s ease-out 0.5s,
+    width 0.25s ease-out 0.5s,
+    height 0.25s ease-out 0.75s;
+}
+
+.btn1 a{
+    text-decoration: none;
+    color:white;
+}
+
+.project_image_container{
+    height: 100%;
+    width: 50%;
+}
+
+.project_image_container img{
+    height: 100%;
+    width: 100%;
+}
+
+.kwick{
+    margin-left: 10%;
+}
+
+.sudoku_jungle{
+    margin-left: 30%;
+}
+
+/* About me section */
+
+.content{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    /* background-color: #E3B5A4; */
+}
+
+#about-me{
+    width: 40%;
+    color: white;
+    text-align: right;
+    margin-top: 20px;
+    transform: translateX(-50%);
+}
+
+#about-me h3{
+    font-family: 'Dancing Script', cursive;
+    /* font-family: "hearthstone"; */
+    font-size: 5em;
+    color: white;
+    text-shadow: 0px 0px 5px #fff4c2, 0px 0px 10px #ff9f46, 0px 0px 30px #bf0aff61;
+}
+
+.square{    
+    height: 65vh;
+    width: 60%;
+    background-color: #D44D5C;
+    margin-top:10vh;
+    margin-left: 28%;
+}
+
+.div-title{
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 55px;
+}
+
+#about-me .description{
+    font-size: 15px;
+}
+
+.btn-skills{
+    max-width: fit-content;
+    border: solid 1px white;
+    border-radius: 30px;
+    padding: 12px 15px;
+    text-align:center;
+    margin-left: 70%;
+    margin-top: 20px;
+}
+
+.btn-skills:hover{
+    background-color: white;
+    color:#D44D5C;
+    cursor: pointer;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    border: solid 2px red;
+}
+
+footer .webgl{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
