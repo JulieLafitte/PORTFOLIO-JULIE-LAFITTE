@@ -61,87 +61,108 @@ window.addEventListener('scroll', () =>
     }
 })
 
+// /**
+//  * WebGL
+//  */
+
+// const canvas = document.querySelector('canvas.webgl')
+// const canvasBounding = canvas.getBoundingClientRect()
+
+//  const scene = new THREE.Scene()
+
+//  const camera = new THREE.PerspectiveCamera(75, canvasBounding.width / canvasBounding.height, 0.01, 100) 
+// //  (75 représente les field of view)
+// camera.position.z = 2
+// scene.add(camera)
+
+// /**
+//  * Objects
+//  */
+
+// //LinkedIn
+// const linkedin = new THREE.Mesh(
+//     new THREE.BoxBufferGeometry(1, 1, 1),
+//     new THREE.MeshNormalMaterial()
+// );
+
+// linkedin.position.set(-3, 0, 0)
+
+// scene.add(linkedin)
+
+// //GitHub
+// const github = new THREE.Mesh(
+//     new THREE.BoxBufferGeometry(1, 1, 1),
+//     new THREE.MeshNormalMaterial()
+// );
+
+// github.position.set(-1, 0, 0)
+
+// scene.add(github)
+
+// //Twitter
+// const twitter = new THREE.Mesh(
+//     new THREE.BoxBufferGeometry(1, 1, 1),
+//     new THREE.MeshNormalMaterial()
+// );
+
+// twitter.position.set(1, 0, 0)
+
+// scene.add(twitter)
+
+// //Mail
+// const mail = new THREE.Mesh(
+//     new THREE.BoxBufferGeometry(1, 1, 1),
+//     new THREE.MeshNormalMaterial()
+// );
+
+// mail.position.set(3, 0, 0)
+
+// scene.add(mail)
+
+
+// const renderer = new THREE.WebGLRenderer({ canvas: canvas})
+// renderer.setSize(canvasBounding.width, canvasBounding.height)
+
+// //Resize
+// window.addEventListener('resize', () =>
+// {
+//     const canvasBounding = canvas.getBoundingClientRect()
+
+//     camera.aspect = canvasBounding.width / canvasBounding.height
+//     camera.updateProjectionMatrix()
+
+//     renderer.setSize(canvasBounding.width, canvasBounding.height)
+// })
+
+// //Animation
+// const tick = () =>
+// {
+//     // mail.rotation.y += 0.01
+
+//     renderer.render(scene, camera)
+
+//     window.requestAnimationFrame(tick)
+// }
+
+// tick()
+
 /**
- * WebGL
+ * Footer
  */
 
-const canvas = document.querySelector('canvas.webgl')
-const canvasBounding = canvas.getBoundingClientRect()
+document.getElementById("gmail_icone").onclick=function(){
+    const copyToClipboard = str => {
+        const el = document.createElement('textarea');
+        el.value = str;
+        el.setAttribute('readonly', '');
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+      };
+const copied =document.getElementById("copied_notification");
 
- const scene = new THREE.Scene()
-
- const camera = new THREE.PerspectiveCamera(75, canvasBounding.width / canvasBounding.height, 0.01, 100) 
-//  (75 représente les field of view)
-camera.position.z = 2
-scene.add(camera)
-
-/**
- * Objects
- */
-
-//LinkedIn
-const linkedin = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(1, 1, 1),
-    new THREE.MeshNormalMaterial()
-);
-
-linkedin.position.set(-3, 0, 0)
-
-scene.add(linkedin)
-
-//GitHub
-const github = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(1, 1, 1),
-    new THREE.MeshNormalMaterial()
-);
-
-github.position.set(-1, 0, 0)
-
-scene.add(github)
-
-//Twitter
-const twitter = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(1, 1, 1),
-    new THREE.MeshNormalMaterial()
-);
-
-twitter.position.set(1, 0, 0)
-
-scene.add(twitter)
-
-//Mail
-const mail = new THREE.Mesh(
-    new THREE.BoxBufferGeometry(1, 1, 1),
-    new THREE.MeshNormalMaterial()
-);
-
-mail.position.set(3, 0, 0)
-
-scene.add(mail)
-
-
-const renderer = new THREE.WebGLRenderer({ canvas: canvas})
-renderer.setSize(canvasBounding.width, canvasBounding.height)
-
-//Resize
-window.addEventListener('resize', () =>
-{
-    const canvasBounding = canvas.getBoundingClientRect()
-
-    camera.aspect = canvasBounding.width / canvasBounding.height
-    camera.updateProjectionMatrix()
-
-    renderer.setSize(canvasBounding.width, canvasBounding.height)
-})
-
-//Animation
-const tick = () =>
-{
-    // mail.rotation.y += 0.01
-
-    renderer.render(scene, camera)
-
-    window.requestAnimationFrame(tick)
+      copyToClipboard('lafittejuliemarie@gmail.com')
 }
-
-tick()
