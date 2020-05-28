@@ -164,5 +164,9 @@ document.getElementById("gmail_icone").onclick=function(){
       };
 const copied =document.getElementById("copied_notification");
 
+copied.style.display = "block"
+setTimeout(function(){
+    copied.style.display = "none"
+}, 2000)
       copyToClipboard('lafittejuliemarie@gmail.com')
 }
