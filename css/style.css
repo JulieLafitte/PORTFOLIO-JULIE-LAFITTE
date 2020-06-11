@@ -34,9 +34,10 @@ header{
 
 nav{
     height: 5%;
-    width: 32%;
-    margin-left: 20%;
-    transform: translate(-50%, 50px);
+    width: fit-content;
+    margin-left: 10%;
+    
+    /* transform: translate(-50%, 50px); */
     display: flex;
     justify-content: space-between;
 }
@@ -47,6 +48,8 @@ nav a{
     height: 20px;
     padding: 8px;
     font-size:20px;
+    margin-top: 50px;
+    margin-right: 10px;
 }
 
 nav a:hover{
@@ -79,7 +82,6 @@ h2{
 }
 
 .name{
-    
     position: absolute;
     top: 5%;
     left:52%;
@@ -143,6 +145,7 @@ h2{
 .project_image{
     position: relative;
     width: 60%;
+    height: 50vh;
     overflow: hidden;
 }
 
@@ -160,14 +163,13 @@ h2{
 }
 
 .projet-resume{
-width: 38%;
-height: 50vh;
-background-color: #C8ADC0;
-color: white;
-
+    width: 38%;
+    height: 50vh;
+    background-color: #C8ADC0;
+    color: white;
 }
 
-.project-title{
+h4{
     margin-top: 20px;
     font-size: 30px;
     text-align: center;
@@ -178,19 +180,36 @@ h5{
     text-align: center;
     font-weight: 300;
     font-size: larger;
-    /* letter-spacing: 3px; */
     color: #FFF4C2;
-}
-
-.project-role{
-    margin-top: 10px;
 }
 
 .project-desc{
     margin:20px 10px 10px 10px;
     min-height: 35%;
-    max-height: 45%;
+    max-height: 50%;
     overflow-y: scroll;
+}
+
+.project-role{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-role a{
+    text-decoration: none;
+    color: #FF9F46;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+
+.technos{
+    font-size: 14px;
+}
+
+.technos span{
+    color: #FFF4C2;
 }
 
 .project-desc::-webkit-scrollbar{
@@ -286,11 +305,11 @@ h5{
     width: 100%;
 }
 
-.kwick{
+.left{
     margin-left: 10%;
 }
 
-.sudoku_jungle{
+.right{
     margin-left: 30%;
 }
 
@@ -313,7 +332,6 @@ h5{
 
 #about-me h3{
     font-family: 'Dancing Script', cursive;
-    /* font-family: "hearthstone"; */
     font-size: 5em;
     color: white;
     text-shadow: 0px 0px 5px #fff4c2, 0px 0px 10px #ff9f46, 0px 0px 30px #bf0aff61;
@@ -420,3 +438,88 @@ footer{
     left: -40px;
     display: none;
 }
+
+/* Mobile portait */
+@media (max-width: 575.98px){
+
+}
+
+/* Mobile landscape */
+@media (max-width: 767.98px){
+
+}
+
+/* Tablets */
+@media (max-width: 991.98px){
+    nav{
+        width: fit-content;
+    }
+    h1{
+        font-size: 4.5em;
+    }
+    h2{
+        font-size: 3em;
+        margin-left:9%;
+    }
+    .name{
+        top: 18%;
+        left:58%;
+    }
+    .project{
+        width: 80%;
+    }
+    h4{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    h5{
+        font-size: 15px;
+    }
+    .project_image{
+        width: 55%;
+    }
+    .project-desc{
+        font-size: 13px;
+        max-height: 55%;
+        margin:10px 10px 10px 10px;
+    }
+    .projet-resume{
+        width: 45%;
+    }
+    .project-role{
+        font-size: 13px;
+    }
+    .technos{
+        font-size: 13px;
+    }
+    .btn1{
+        margin-top: 15px;
+        width: 60%;
+        margin-left: 20%;
+        padding: 5px 5px 5px 5px;
+    }
+    .right{
+        margin-left: 10%;
+    }
+    #about-me{
+        width: 50%;
+        color: white;
+        text-align: right;
+        margin-top: 20px;
+        transform: translateX(-50%);
+    }
+    .div-title{
+        font-size: 45px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .btn-skills{
+       display: none;
+    }
+}
+
+/* Desktop */
+/* @media (max-width: 575.98px){
+
+} */
